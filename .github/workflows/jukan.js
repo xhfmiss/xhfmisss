@@ -9,7 +9,6 @@ https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-r
 hostname = www.xiaodouzhuan.cn
 ~~~~~~~~~~~~~~~~
 
-
 */
 const $ = new Env('聚看点')
 const drawcash = $.getdata('jukan_cash') || "30" //提现金额
@@ -120,7 +119,7 @@ function sign() {
    try{
      let sign_res = JSON.parse(data)
      if (sign_res.ret == "ok"){
-       //calendarpic = sign_res.calendar_pic
+       calendarpic = sign_res.calendar_pic
        //$.log("签到收益: +"+`calendar_pic`)
          }  else {
        $.log(sign_res.rtn_msg)
