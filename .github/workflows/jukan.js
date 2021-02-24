@@ -9,6 +9,7 @@ https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-r
 hostname = www.xiaodouzhuan.cn
 ~~~~~~~~~~~~~~~~
 
+
 */
 const $ = new Env('聚看点')
 const drawcash = $.getdata('jukan_cash') || "30" //提现金额
@@ -98,7 +99,7 @@ if (typeof $request !== 'undefined') {
      await artTotal() 
 }  
    if ((150-artcount) == 0&&(50-videocount) ==0){
-     $.msg($.name+" 昵称:"+userName, $.sub, $.desc+"<今日阅读任务已完成>")
+     $.msg($.name+" 昵称:"+userName, $.sub, $.desc+"<今日阅读任务已完成>",{'media-url': //calendarpic })
      }
      $.log("\n"+ $.name+"账号"+$.index+" : "+userName+ "  本次运行任务已结束\n~~~~~~~~~~~~~~~~~~\n")
    }
@@ -119,7 +120,7 @@ function sign() {
    try{
      let sign_res = JSON.parse(data)
      if (sign_res.ret == "ok"){
-       calendarpic = sign_res.calendar_pic
+       //calendarpic = sign_res.calendar_pic
        //$.log("签到收益: +"+`calendar_pic`)
          }  else {
        $.log(sign_res.rtn_msg)
